@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: game-208
   name: game-app-service
 spec:
   selector:
