@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: game-deployment
+  namespace: game-208
   labels:
     app: game-app
 spec:
@@ -26,7 +27,7 @@ spec:
                 - arm64
       containers:
       - name: nginx
-        image: public.ecr.aws/nginx/nginx:1.23
+        image:  public.ecr.aws/l6m2t8p7/docker-2048:latest
         ports:
         - containerPort: 80
         imagePullPolicy: IfNotPresent
