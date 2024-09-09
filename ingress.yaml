@@ -4,7 +4,8 @@ metadata:
   namespace: game-208
   name: ingress-2048
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   ingressClassName: alb
   rules:
